@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function(){
-    Route::group(['namespace' => 'Dashboard', 'middleware' =>'auth:admin', 'prefix' => 'admin'], function (){
+    Route::group(['namespace' => 'Dashboard', 'middleware' =>['role:administrator'], 'prefix' => 'admin'], function (){
 
         Route::get('index','DashboardController@index')->name('admin.dashboard');
         Route::get('logout','LoginController@logout')->name('admin.logout');
@@ -32,12 +32,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
 
         ##################  Blog Routes #############################################################
 
-        Route::group(['prefix' => 'blog'], function (){
-            Route::get('/show-blog', 'BlogController@index')->name('index.blog');
-            Route::post('save', 'BlogController@store')->name('save.blog');
-            Route::get('edit/{id}', 'BlogController@edit')->name('edit.blog');
-            Route::post('update/{id}', 'BlogController@update')->name('update.blog');
-            Route::get('delete/{id}', 'BlogController@destroy')->name('delete.blog');
+        Route::group(['prefix' => 'brigade'], function (){
+            Route::get('/show', 'BrigadeController@index')->name('index.brigades');
+            Route::get('/create', 'BrigadeController@create')->name('create.brigade');
+            Route::post('save', 'BrigadeController@store')->name('save.brigade');
+            Route::get('edit/{id}', 'BrigadeController@edit')->name('edit.brigade');
+            Route::post('update/{id}', 'BrigadeController@update')->name('update.brigade');
+            Route::get('delete/{id}', 'BrigadeController@destroy')->name('delete.brigade');
 
         });
         ######################### End Blog Routes #############################################################

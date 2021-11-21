@@ -12,6 +12,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UserSeeder::class);
-        /// $this->call(AdminDataBaseSeeder::class);
+         //$this->call(LaratrustSeeder::class);
+//         $this->call(RegionDatabaseSeeder::class);
+//         $this->call(TownDatabaseSeeder::class);
+         $this->call(UserDatabaseSeeder::class);
     }
 }

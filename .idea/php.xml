@@ -110,6 +110,8 @@
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-translatable" />
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle" />
       <path value="$PROJECT_DIR$/vendor/mcamara/laravel-localization" />
+      <path value="$PROJECT_DIR$/vendor/santigarcor/laratrust" />
+      <path value="$PROJECT_DIR$/vendor/kkszymanowski/traitor" />
     </include_path>
   </component>
   <component name="PhpUnit">

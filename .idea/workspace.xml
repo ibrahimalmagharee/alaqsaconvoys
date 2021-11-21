@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="183862e9-dcd7-4ae7-936a-9558de86bacb" name="Default Changelist" comment="" />
+    <list default="true" id="183862e9-dcd7-4ae7-936a-9558de86bacb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/BrigadeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/CentralController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/DelegateController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Dashboard/UserRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Region.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Town.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/laratrust.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/laratrust_seeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_10_27_094048_laratrust_setup_tables.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_10_27_114432_create_regions_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_10_27_114544_create_towns_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/LaratrustSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/RegionDatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/TownDatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/UserDatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/alaqsaconvoys.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alaqsaconvoys.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,6 +174,8 @@
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-translatable" />
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-oracle" />
       <path value="$PROJECT_DIR$/vendor/mcamara/laravel-localization" />
+      <path value="$PROJECT_DIR$/vendor/santigarcor/laratrust" />
+      <path value="$PROJECT_DIR$/vendor/kkszymanowski/traitor" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ylFRJ4bStwWuSXM4FR3DhIi3ex" />
@@ -229,6 +265,11 @@
       <workItem from="1635196100218" duration="1062000" />
       <workItem from="1635197342306" duration="109000" />
       <workItem from="1635236536654" duration="765000" />
+      <workItem from="1635326445605" duration="2345000" />
+      <workItem from="1635334587722" duration="2869000" />
+      <workItem from="1635337712964" duration="12277000" />
+      <workItem from="1635415021936" duration="625000" />
+      <workItem from="1635419906351" duration="35000" />
     </task>
     <servers />
   </component>
@@ -243,22 +284,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1633026923344" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1633643611421">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1635350202883">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1633643611421" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1635237300941">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1635350202883" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1635419939108">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1635237300941" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1635419939108" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1635197380913">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1635197380913" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1635236536522">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1635419929810">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1635236536522" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1635419929810" />
     <state x="214" y="0" width="992" height="715" maximized="true" key="dock-window-1" timestamp="1633363750429">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -282,7 +323,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/admin.php</url>
-          <line>43</line>
+          <line>44</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

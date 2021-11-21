@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\LoginRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -15,13 +16,19 @@ class LoginController extends Controller
 
     public function checkLogin(LoginRequest $request)
     {
-        if (auth()->guard('admin')->attempt(['email' => $request->input('email'), 'password' => $request->input('password')])){
-            $notification = array(
-                'message' => __('admin/login.you_are_logged_in_successfully'),
-                'alert-type' => 'success'
-            );
-            return redirect()->route('admin.dashboard')->with($notification);
-        }
+
+            if (auth()->guard()->attempt(['email' => $request->input('email'), 'password' => $request->input('password')])){
+                if (auth()->user()->hasRole('administrator')){
+                    $notification = array(
+                        'message' => __('admin/login.you_are_logged_in_successfully'),
+                        'alert-type' => 'success'
+                    );
+                    return redirect()->route('admin.dashboard')->with($notification);
+                }
+
+            }
+
+
 
         $notification = array(
             'message' => __('admin/login.error_login'),
@@ -45,6 +52,6 @@ class LoginController extends Controller
 
     private function getGuard()
     {
-        return auth('admin');
+        return auth();
     }
 }
